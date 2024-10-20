@@ -1,0 +1,20 @@
+{% extends 'AppLubin/base.html' %}
+
+{% block title %}Add Review{% endblock %}
+
+{% block content %}
+    <h1>Add New Review</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Add Review</button>
+    </form>
+    <hr>
+    <h2>Quick Links</h2>
+    <ul>
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'add_author' %}">Add Author</a></li>
+        <li><a href="{% url 'add_book' %}">Add Book</a></li>
+        <li><a href="{% url 'search_books' %}">Search Books</a></li>
+    </ul>
+{% endblock %}

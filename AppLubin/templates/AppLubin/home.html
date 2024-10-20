@@ -1,0 +1,28 @@
+{% extends 'AppLubin/base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <h1>Welcome to My Book Project</h1>
+    <p>Here you can manage authors, books, and reviews.</p>
+
+    <h2>List of Books:</h2>
+    <ul>
+        {% for book in books %}
+            <li>
+                <strong>{{ book.title }}</strong> by {{ book.author.name }}
+                (Published on: {{ book.publication_date }})
+            </li>
+        {% empty %}
+            <li>No books available.</li>
+        {% endfor %}
+    </ul>
+
+    <h3>Quick Links</h3>
+    <ul>
+        <li><a href="{% url 'add_author' %}">Add Author</a></li>
+        <li><a href="{% url 'add_book' %}">Add Book</a></li>
+        <li><a href="{% url 'add_review' %}">Add Review</a></li>
+        <li><a href="{% url 'search_books' %}">Search Books</a></li>
+    </ul>
+{% endblock %}
