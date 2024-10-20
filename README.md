@@ -58,4 +58,4 @@ This Django project is a book management system that allows users to add authors
 
 
 ## Contributing
-    If you wish to contribute to this project, please fork the repository and create a pull request.
+    If you wish to contribute to this project, please fork the repository and create a pull request.# Tercera-pre-entrega-Lubin-Caron
